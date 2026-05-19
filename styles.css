@@ -845,14 +845,36 @@ a {
   .mission-copy p {
     font-size: 1.05rem;
     line-height: 1.55;
-
-     .overview-logo {
-    padding: 6px 20px 48px;
+    
   }
+.read-more-btn {
+    display: block;
+    width: 100%;
+    padding: 18px 0;
+    background: #ffffff;
+    color: #0056b3;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
 
-  .overview-logo img {
-    width: min(100%, 380px);
-  
+.image-box{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.image-box img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   
 }.contact-section {
   min-height: 100vh;
