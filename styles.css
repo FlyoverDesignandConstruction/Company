@@ -845,7 +845,15 @@ a {
   .mission-copy p {
     font-size: 1.05rem;
     line-height: 1.55;
+
+     .overview-logo {
+    padding: 6px 20px 48px;
   }
+
+  .overview-logo img {
+    width: min(100%, 380px);
+  
+  
 }.contact-section {
   min-height: 100vh;
   padding: 90px 50px 24px;
@@ -853,8 +861,6 @@ a {
   background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
 }
 
-<<<<<<< Updated upstream
-=======
 .contact-section {
   min-height: 100vh;
   padding: 90px 50px 24px;
@@ -862,7 +868,6 @@ a {
   background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
 }
 
->>>>>>> Stashed changes
 .contact-section h2 {
   margin: 0;
   color: #fff;
