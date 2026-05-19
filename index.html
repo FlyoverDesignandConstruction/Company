@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyover Design &amp; Construction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" id="home" aria-label="Flyover hero">
+      <span class="anchor-point" id="contact" aria-hidden="true"></span>
+      <span class="anchor-point" id="services" aria-hidden="true"></span>
+      <span class="anchor-point" id="projects" aria-hidden="true"></span>
+
+      <header class="site-header">
+        <a href="#home" class="logo" aria-label="Flyover home">
+          <img src="Flyover logo.svg" alt="Flyover Logo" class="logo-mark">
+          <span class="company-text" aria-hidden="true">
+            <span class="company-name">FLYOVER</span>
+            <span class="company-tagline">Design &amp; Construction Co.,Ltd</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="#about">About us</a>
+          <a href="#contact">Contact us</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a class="quote-link" href="#contact">GET A QUOTE</a>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <h1>
+          <span>Your Dreams,</span>
+          <span>Our Service</span>
+        </h1>
+        <p>
+          <span>&quot;Dreams are meant to come true.</span>
+          <span>We will built it happen for you.&quot;</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="#contact">Contact us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-overview" id="about" aria-labelledby="company-overview-title">
+      <div class="overview-copy">
+        <h2 id="company-overview-title">Company Overview</h2>
+        <p>
+          Flyover Design and Construction Company is a dynamic and innovative organization dedicated to providing exceptional design and construction services. In 2020, with a commitment to excellence and a passion for creativity, we established ourselves as a leader in the industry. We are a company of professionals and experts with relevant licenses. Our head office is located in Yangon and our organization is a DICA registered company in Myanmar.
+        </p>
+        <button class="read-more" type="button" data-open-overview data-popup-open="overview-popup" aria-haspopup="dialog" aria-controls="overview-popup">
+          Read More
+        </button>
+      </div>
+
+      <div class="overview-logo" aria-label="Flyover company logo">
+        <img src="PNG.png" alt="Flyover Design and Construction Co.,Ltd. logo">
+      </div>
+    </section>
+
+    <section class="mission-vision" id="mission" aria-labelledby="mission-title">
+      <div class="mission-content">
+        <h2 id="mission-title">Our Philosophy, Vision, Mission and Future Plan</h2>
+        <div class="mission-copy">
+          <p>
+            We are founded on the belief that buildings transform the life of people and communities. We believe that the quality of our surrounding has a direct influence on the quality of our lives.
+          </p>
+          <button class="read-more mission-read-more" type="button" data-popup-open="mission-popup" aria-haspopup="dialog" aria-controls="mission-popup">
+            Read More
+          </button>
+        </div>
+
+  </main>
+
+  <div class="overview-popup" id="overview-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="overview-popup-title">
+    <div class="overview-popup__backdrop" data-close-overview data-popup-close></div>
+    <article class="overview-popup__panel">
+      <button class="overview-popup__close" type="button" data-close-overview data-popup-close aria-label="Close company overview popup">&times;</button>
+      <h2 id="overview-popup-title">Company Overview</h2>
+      <div class="overview-popup__content">
+        <p>
+          Flyover Design and Construction Company is a dynamic and innovative organization dedicated to providing exceptional design and construction services. In 2020, with a commitment to excellence and a passion for creativity, we established ourselves as a leader in the industry. We are a company of professionals and experts with relevant licenses. Our head office is located in Yangon and our organization is a DICA registered company in Myanmar.
+        </p>
+        <p>
+          Our unwavering focus on quality, safety and sustainability sets us apart, and our clients receive the best possible solutions. We specialize in Architectural Design (Residential, Apartment, Commercial), Design renovation and Interior design, Decoration and Furniture works, M&amp;E, High Tension, Road and Bridge. Our custom home builds, renovation and building addition projects have been operating in Yangon, Nay Pyi Taw, Mandalay, and other regions of Myanmar for years.
+        </p>
+        <p>
+          Flyover philosophy is founded on the belief that buildings transform the life of people and communities. We create the desired atmosphere for users to enjoy functionality inside the building. Using simplicity and technology becomes the innovative design.
+        </p>
+        <p>
+          Flyover aims to build aesthetically valuable and inspiring architecture to enrich people lives and create better world to live in. Flyover aims to be a high leading company that values clients ideas to life through the creation of space. Our higher mission is in shaping the future of the world by creating a safe sustainable community by our architecture.
+        </p>
+      </div>
+    </article>
+  </div>
+
+
+  <div class="overview-popup mission-popup" id="mission-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mission-popup-title">
+    <div class="overview-popup__backdrop" data-popup-close></div>
+    <article class="overview-popup__panel">
+      <button class="overview-popup__close" type="button" data-popup-close aria-label="Close philosophy, vision, mission and future plan popup">&times;</button>
+      <h2 id="mission-popup-title">Our Philosophy, Vision, Mission and Future Plan</h2>
+      <div class="overview-popup__content">
+        <p>
+          We are founded on the belief that buildings transform the life of people and communities. We believe that the quality of our surrounding has a direct influence on the quality of our lives.
+        </p>
+        <p>
+          Our philosophy is to be in full harmony with history, culture and the natural environment through the use of current technological provisions. We create the desired atmosphere for users to enjoy functionality inside the building. Using simplicity and technology becomes the innovative design.
+        </p>
+        <p>
+          We collaborate with our clients in every design stage to serve their ideas. In appreciation of our clients' vision, your needs become our targets. Our clients' vision guided with our experience comes in excellent results.
+        </p>
+        <p>
+          In the future years, we intend to be the highest level in Myanmar. We provide high quality design and excellent services to our clients with professionalism, honesty and integrity.
+        </p>
+        <p>
+          Our duty is to achieve a better-built environment, preserving specific social values in a modern context. Our vision is dedicated further to create the next generation of architects and engineers to continue the progress and advancements of firms.
+        </p>
+        <p>
+          Our mission is to build aesthetically valuable and inspiring architecture to enrich people's lives and create a better world to live in. Our higher mission is in shaping the future of the world by creating a safe sustainable community through our architecture.
+        </p>
+      </div>
+    </article>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

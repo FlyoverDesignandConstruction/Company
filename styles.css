@@ -1,0 +1,850 @@
+:root {
+  --blue: #168fd8;
+  --blue-dark: #075aa8;
+  --blue-deep: #064d91;
+  --ink: #231f20;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--white);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 43%, rgba(255, 255, 255, 0) 72%),
+    url("assets/hero-bg.png") center center / cover no-repeat;
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(16, 106, 184, 0.04) 54%, rgba(0, 0, 0, 0.08) 100%);
+  pointer-events: none;
+}
+
+.anchor-point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 42px;
+  padding: clamp(28px, 3vw, 54px) clamp(18px, 1.1vw, 26px) 0 clamp(28px, 2.8vw, 54px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: clamp(110px, 9.6vw, 180px);
+  height: clamp(110px, 9.6vw, 180px);
+  object-fit: contain;
+}
+
+.company-text {
+  display: grid;
+  gap: 14px;
+  margin-left: clamp(-34px, -1.8vw, -18px);
+  margin-top: 18px;
+}
+
+.company-name {
+  color: var(--ink);
+  font-size: clamp(1.6rem, 1.58vw, 1.95rem);
+  font-weight: 900;
+  line-height: 0.8;
+}
+
+.company-tagline {
+  color: #333333;
+  font-size: clamp(0.78rem, 0.78vw, 0.96rem);
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(28px, 3.5vw, 70px);
+  padding-top: clamp(80px, 8.3vw, 104px);
+  white-space: nowrap;
+}
+
+.site-nav a {
+  position: relative;
+  color: var(--white);
+  font-size: clamp(1.35rem, 1.8vw, 2.18rem);
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow:
+    -2px -2px 0 var(--blue),
+    2px -2px 0 var(--blue),
+    -2px 2px 0 var(--blue),
+    2px 2px 0 var(--blue),
+    0 3px 3px rgba(0, 51, 107, 0.22);
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  outline: none;
+}
+
+.site-nav .quote-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(210px, 14.5vw, 282px);
+  min-height: clamp(60px, 4.2vw, 80px);
+  padding: 0 25px;
+  border-radius: 18px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: clamp(1.45rem, 1.78vw, 2.15rem);
+  text-shadow: 0 2px 4px rgba(0, 43, 88, 0.5);
+  box-shadow: 0 12px 28px rgba(14, 88, 161, 0.2);
+}
+
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 42px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(12, 93, 171, 0.95);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 999px;
+  background: var(--white);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.hero-copy {
+  position: absolute;
+  top: clamp(300px, 35.1vh, 382px);
+  left: clamp(32px, 2.6vw, 50px);
+  z-index: 2;
+  width: min(780px, 49vw);
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(4.2rem, 5.75vw, 7rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-shadow:
+    -3px -3px 0 var(--blue),
+    3px -3px 0 var(--blue),
+    -3px 3px 0 var(--blue),
+    3px 3px 0 var(--blue),
+    0 5px 4px rgba(0, 58, 120, 0.25);
+}
+
+.hero-copy h1 span,
+.hero-copy p span {
+  display: block;
+}
+
+.hero-copy p {
+  margin: clamp(24px, 2.15vw, 36px) 0 0;
+  color: var(--white);
+  font-size: clamp(1.25rem, 1.55vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow:
+    -1px -1px 0 var(--blue),
+    1px -1px 0 var(--blue),
+    -1px 1px 0 var(--blue),
+    1px 1px 0 var(--blue),
+    0 3px 3px rgba(0, 58, 120, 0.25);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: clamp(64px, 8.5vh, 96px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+  padding: 0 27px;
+  border-radius: 999px;
+  font-size: clamp(1.15rem, 1.25vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.btn-primary {
+  min-width: 204px;
+  background: var(--white);
+  color: var(--blue);
+  box-shadow: 0 8px 18px rgba(17, 83, 148, 0.14);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  box-shadow: 0 12px 24px rgba(17, 83, 148, 0.22);
+}
+
+.btn-outline {
+  min-width: 210px;
+  border: 6px solid var(--blue);
+  color: var(--white);
+  text-shadow:
+    -1px -1px 0 var(--blue),
+    1px -1px 0 var(--blue),
+    -1px 1px 0 var(--blue),
+    1px 1px 0 var(--blue);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background: rgba(20, 107, 183, 0.12);
+}
+
+.company-overview {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: stretch;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--white);
+  isolation: isolate;
+}
+
+.company-overview::before {
+  position: absolute;
+  inset: 0 45% 0 0;
+  z-index: -2;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.78)),
+    url("assets/hero-bg.png") center / cover no-repeat;
+  opacity: 0.9;
+}
+
+.company-overview::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.96) 52%, #ffffff 64%);
+}
+
+.overview-copy {
+  align-self: start;
+  width: min(980px, 100%);
+  padding: clamp(78px, 6.7vw, 128px) clamp(28px, 3vw, 52px) clamp(42px, 4vw, 72px);
+}
+
+.overview-copy h2 {
+  margin: 0 0 clamp(32px, 3vw, 48px);
+  color: var(--blue);
+  font-size: clamp(3.4rem, 4.7vw, 5.6rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-shadow: 0 8px 0 rgba(0, 0, 0, 0.1), 0 2px 0 var(--white);
+}
+
+.overview-copy p {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(1.25rem, 1.42vw, 1.7rem);
+  line-height: 1.48;
+  text-align: center;
+  text-shadow: 0 2px 0 var(--white), 0 3px 5px rgba(0, 72, 132, 0.24);
+}
+
+.read-more {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin: 32px auto 0;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--blue);
+  color: var(--white);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(20, 107, 183, 0.2);
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.read-more:hover,
+.read-more:focus-visible {
+  transform: translateY(-2px);
+  background: var(--blue-dark);
+  box-shadow: 0 16px 34px rgba(20, 107, 183, 0.28);
+  outline: none;
+}
+
+.overview-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: clamp(42px, 5vw, 86px) clamp(26px, 4vw, 76px);
+  background: var(--white);
+}
+
+.overview-logo img {
+  display: block;
+  width: min(1320px, 142%);
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.overview-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+.overview-popup.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overview-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 32, 54, 0.62);
+  backdrop-filter: blur(4px);
+}
+
+.overview-popup__panel {
+  position: relative;
+  z-index: 1;
+  width: min(940px, 100%);
+  max-height: min(82vh, 820px);
+  overflow: auto;
+  border-radius: 8px;
+  background: var(--white);
+  color: #1f2933;
+  box-shadow: 0 28px 80px rgba(0, 32, 68, 0.32);
+  padding: clamp(28px, 3vw, 48px);
+}
+
+.overview-popup__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 6px;
+  background: #eef7fd;
+  color: var(--blue-deep);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.overview-popup__close:hover,
+.overview-popup__close:focus-visible {
+  background: var(--blue);
+  color: var(--white);
+  outline: none;
+}
+
+.overview-popup h2 {
+  margin: 0 54px 22px 0;
+  color: var(--blue);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.overview-popup__content {
+  display: grid;
+  gap: 18px;
+}
+
+.overview-popup__content p {
+  margin: 0;
+  color: #24516f;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.62;
+}
+
+
+.mission-vision {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: clamp(32px, 3vw, 48px) clamp(24px, 2.9vw, 56px) clamp(48px, 5vw, 92px);
+  background:
+    linear-gradient(90deg, rgba(46, 94, 139, 0.8) 0%, rgba(58, 113, 163, 0.46) 32%, rgba(58, 113, 163, 0.06) 58%, rgba(58, 113, 163, 0) 100%),
+    url("assets/mission-building-bg.jpg") center center / cover no-repeat;
+  isolation: isolate;
+}
+
+.mission-vision::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+.mission-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-content h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.45rem, 3.45vw, 4.25rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-shadow:
+    -3px -3px 0 var(--blue-dark),
+    3px -3px 0 var(--blue-dark),
+    -3px 3px 0 var(--blue-dark),
+    3px 3px 0 var(--blue-dark),
+    0 8px 0 rgba(0, 51, 107, 0.34);
+}
+
+.mission-copy {
+  width: min(980px, 54vw);
+  padding-top: clamp(36px, 5vh, 58px);
+}
+
+.mission-copy p {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.25rem, 1.38vw, 1.6rem);
+  line-height: 1.45;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 43, 88, 0.52);
+}
+
+.mission-read-more {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--blue-dark);
+}
+
+.mission-read-more:hover,
+.mission-read-more:focus-visible {
+  background: var(--white);
+  color: var(--blue-deep);
+}
+
+.mission-popup .overview-popup__panel {
+  width: min(1040px, 100%);
+}
+@media (max-width: 1440px) {
+  .site-header {
+    gap: 24px;
+    padding-left: 36px;
+    padding-right: 18px;
+  }
+
+  .site-nav {
+    gap: 22px;
+  }
+
+  .site-nav a {
+    font-size: 1.35rem;
+  }
+
+  .site-nav .quote-link {
+    min-width: 190px;
+    min-height: 58px;
+    font-size: 1.35rem;
+  }
+
+  .hero-copy {
+    width: min(680px, 68vw);
+  }
+}
+
+@media (max-width: 1120px) {
+  .site-header {
+    align-items: center;
+  }
+
+  .site-nav {
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .site-nav a {
+    font-size: 1.45rem;
+  }
+
+  .site-nav .quote-link {
+    min-width: 188px;
+    min-height: 58px;
+    font-size: 1.35rem;
+  }
+
+  .hero-copy {
+    width: min(680px, 68vw);
+  }
+
+  .company-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .company-overview::before {
+    inset: 0;
+  }
+
+  .company-overview::after {
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .overview-copy {
+    padding-bottom: 18px;
+  }
+
+  .overview-copy p {
+    text-align: left;
+  }
+
+  .overview-logo {
+    min-height: auto;
+    padding-top: 8px;
+  }
+
+  .overview-logo img {
+    width: min(72vw, 520px);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero {
+    background-position: 56% center;
+  }
+
+  .hero::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    background: linear-gradient(90deg, rgba(226, 243, 255, 0.72) 0%, rgba(226, 243, 255, 0.22) 58%, rgba(226, 243, 255, 0.04) 100%);
+  }
+
+  .site-header {
+    padding: 20px 18px 0;
+  }
+
+  .logo-mark {
+    width: 76px;
+    height: 76px;
+  }
+
+  .company-text {
+    gap: 8px;
+    margin-left: -14px;
+    margin-top: 8px;
+  }
+
+  .company-name {
+    font-size: 1.45rem;
+  }
+
+  .company-tagline {
+    max-width: 190px;
+    font-size: 0.76rem;
+    white-space: normal;
+  }
+
+  .nav-toggle {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 88px;
+    right: 18px;
+    display: grid;
+    min-width: 220px;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 42px rgba(6, 65, 127, 0.18);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .nav-open .site-nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .site-nav a {
+    color: var(--blue-dark);
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 43, 88, 0.5);
+  }
+
+  .site-nav .quote-link {
+    min-width: 100%;
+    min-height: 48px;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 1.05rem;
+  }
+
+  .hero-copy {
+    top: 32vh;
+    left: 22px;
+    width: calc(100% - 44px);
+  }
+
+  .hero-copy h1 {
+    max-width: 620px;
+    font-size: clamp(3.3rem, 13.5vw, 5.2rem);
+    line-height: 1.08;
+    text-shadow:
+      -2px -2px 0 var(--blue),
+      2px -2px 0 var(--blue),
+      -2px 2px 0 var(--blue),
+      2px 2px 0 var(--blue),
+      0 4px 4px rgba(0, 58, 120, 0.22);
+  }
+
+  .hero-copy p {
+    max-width: 540px;
+    font-size: clamp(1.18rem, 4.8vw, 1.75rem);
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 54px;
+  }
+
+  .btn {
+    min-height: 54px;
+    padding: 0 23px;
+    font-size: 1.08rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    min-width: 170px;
+  }
+
+  .btn-outline {
+    border-width: 4px;
+  }
+
+  .overview-copy h2 {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+  white-space: normal;
+  }
+
+  .overview-copy p {
+    font-size: 1.08rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-mark {
+    width: 66px;
+    height: 66px;
+  }
+
+  .company-name {
+    font-size: 1.22rem;
+  }
+
+  .company-tagline {
+    max-width: 152px;
+    font-size: 0.68rem;
+  }
+
+  .hero-copy {
+    top: 30vh;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 15vw, 3.8rem);
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 44px;
+  }
+
+  .btn {
+    min-width: 184px;
+  }
+
+  .company-overview {
+    min-height: auto;
+  }
+
+  .overview-copy {
+    padding: 48px 20px 18px;
+  }
+
+  .read-more {
+    width: 100%;
+  }
+
+  .overview-logo {
+    padding: 6px 20px 48px;
+  }
+
+  .overview-logo img {
+    width: min(100%, 380px);
+  }
+
+  .overview-popup {
+    padding: 14px;
+  }
+
+  .overview-popup__panel {
+    max-height: 88vh;
+    padding: 26px 20px;
+  }
+}
+@media (max-width: 1120px) {
+  .mission-vision {
+    min-height: auto;
+    padding: 52px 28px 64px;
+    background-position: center center;
+  }
+
+  .mission-content h2 {
+    font-size: clamp(2.5rem, 9vw, 4.8rem);
+    white-space: normal;
+  }
+
+  .mission-copy {
+    width: min(760px, 100%);
+  }
+
+  .mission-copy p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+  .mission-vision {
+    padding: 44px 20px 48px;
+    background-position: 56% center;
+  }
+
+  .mission-copy {
+    padding-top: 26px;
+  }
+
+  .mission-copy p {
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+}
