@@ -831,8 +831,7 @@ a {
   .mission-copy p {
     text-align: left;
   }
-}
-
+  
 @media (max-width: 560px) {
   .mission-vision {
     padding: 44px 20px 48px;
@@ -847,4 +846,140 @@ a {
     font-size: 1.05rem;
     line-height: 1.55;
   }
+}.contact-section {
+  min-height: 100vh;
+  padding: 90px 50px 24px;
+  color: #168fd8;
+  background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
 }
+
+.contact-section h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(4rem, 5vw, 6.2rem);
+  font-weight: 900;
+  text-shadow: -2px -2px 0 #168fd8, 2px -2px 0 #168fd8,
+    -2px 2px 0 #168fd8, 2px 2px 0 #168fd8;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.55fr 0.3fr;
+  gap: 70px;
+  align-items: start;
+  text-align: center;
+}
+
+.contact-layout h3 {
+  margin: 0 0 18px;
+  font-size: clamp(2.8rem, 3.7vw, 4.7rem);
+  line-height: 1;
+}
+
+.contact-office {
+  padding-top: 70px;
+}
+
+.contact-office p,
+.contact-inquiries p,
+.contact-inquiries a,
+.contact-menu a,
+.social-area p,
+.contact-footer p {
+  color: #168fd8;
+  font-size: clamp(1.3rem, 1.55vw, 1.9rem);
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.map-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(660px, 100%);
+  min-height: 260px;
+  margin: 56px auto 0;
+  padding: 28px;
+  border: 2px solid rgba(22, 143, 216, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.85), rgba(232,243,252,.9)),
+    repeating-linear-gradient(42deg, rgba(22,143,216,.18) 0 12px, transparent 12px 58px);
+  color: #075aa8;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.contact-inquiries,
+.contact-menu {
+  display: grid;
+  gap: 16px;
+  padding-top: 38px;
+}
+
+.contact-inquiries .email {
+  margin-top: 38px;
+}
+
+.social-area {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.social-area p,
+.contact-footer p {
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  color: #377fca;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.contact-footer {
+  margin-top: 75px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 60px 22px 28px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    text-align: left;
+  }
+
+  .contact-office,
+  .contact-inquiries,
+  .contact-menu {
+    padding-top: 0;
+  }
+
+  .social-area,
+  .contact-footer {
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
