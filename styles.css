@@ -286,7 +286,7 @@ a {
   content: "";
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.78)),
-    url("assets/hero-bg.png") center / cover no-repeat;
+    url("hero-bg.png") center / cover no-repeat;
   opacity: 0.9;
 }
 
@@ -461,7 +461,7 @@ a {
   padding: clamp(32px, 3vw, 48px) clamp(24px, 2.9vw, 56px) clamp(48px, 5vw, 92px);
   background:
     linear-gradient(90deg, rgba(46, 94, 139, 0.8) 0%, rgba(58, 113, 163, 0.46) 32%, rgba(58, 113, 163, 0.06) 58%, rgba(58, 113, 163, 0) 100%),
-    url("assets/mission-building-bg.jpg") center center / cover no-repeat;
+    url("mission-building-bg.jpg") center center / cover no-repeat;
   isolation: isolate;
 }
 
