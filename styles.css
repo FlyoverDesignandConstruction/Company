@@ -1017,10 +1017,8 @@ a {
 
   .social-links {
     justify-content: flex-start;
+    
   }
-<<<<<<< Updated upstream
-element.style {
-}
 @media (max-width: 1120px) {
     .contact-shell {
         padding-top: 64px;
