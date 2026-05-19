@@ -36,7 +36,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 43%, rgba(255, 255, 255, 0) 72%),
-    url("assets/hero-bg.png") center center / cover no-repeat;
+    url("hero-bg.png") center center / cover no-repeat;
   isolation: isolate;
 }
 
