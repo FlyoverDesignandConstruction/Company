@@ -853,6 +853,16 @@ a {
   background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
 }
 
+<<<<<<< Updated upstream
+=======
+.contact-section {
+  min-height: 100vh;
+  padding: 90px 50px 24px;
+  color: #168fd8;
+  background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
+}
+
+>>>>>>> Stashed changes
 .contact-section h2 {
   margin: 0;
   color: #fff;
@@ -981,6 +991,7 @@ a {
   .social-links {
     justify-content: flex-start;
   }
+<<<<<<< Updated upstream
 element.style {
 }
 @media (max-width: 1120px) {
@@ -1021,3 +1032,6 @@ body {
     --ink: #231f20;
     --white: #ffffff;
 
+=======
+}
+>>>>>>> Stashed changes
