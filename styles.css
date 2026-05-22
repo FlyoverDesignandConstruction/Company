@@ -831,6 +831,7 @@ a {
   .mission-copy p {
     text-align: left;
   }
+}
   
 @media (max-width: 560px) {
   .mission-vision {
@@ -876,7 +877,10 @@ a {
     display: block;
     object-fit: cover;
   
-}.contact-section {
+  }
+}
+
+.contact-section {
   min-height: 100vh;
   padding: 90px 50px 24px;
   color: #168fd8;
@@ -909,7 +913,7 @@ a {
 
 .contact-layout h3 {
   margin: 0 0 18px;
-  font-size: clamp(2.8rem, 3.7vw, 4.7rem);
+  font-size: clamp(2.3rem, 3.1vw, 4.1rem);
   line-height: 1;
 }
 
@@ -924,27 +928,25 @@ a {
 .social-area p,
 .contact-footer p {
   color: #168fd8;
-  font-size: clamp(1.3rem, 1.55vw, 1.9rem);
+  font-size: clamp(1.05rem, 1.25vw, 1.45rem);
   line-height: 1.35;
   text-decoration: none;
 }
 
 .map-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: min(660px, 100%);
   min-height: 260px;
   margin: 56px auto 0;
-  padding: 28px;
+  overflow: hidden;
   border: 2px solid rgba(22, 143, 216, 0.2);
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.85), rgba(232,243,252,.9)),
-    repeating-linear-gradient(42deg, rgba(22,143,216,.18) 0 12px, transparent 12px 58px);
-  color: #075aa8;
-  font-size: 1.4rem;
-  font-weight: 900;
-  text-decoration: none;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.map-box iframe {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 0;
 }
 
 .contact-inquiries,
@@ -952,6 +954,25 @@ a {
   display: grid;
   gap: 16px;
   padding-top: 38px;
+}
+
+.contact-menu {
+  width: min(100%, 280px);
+  padding: 34px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(232, 244, 255, 0.8));
+  box-shadow: 0 18px 42px rgba(6, 77, 145, 0.14);
+}
+
+.contact-menu h3 {
+  margin-bottom: 8px;
+}
+
+.contact-menu a {
+  display: block;
+  padding: 4px 0;
+  font-size: clamp(1.05rem, 1.16vw, 1.35rem);
+  font-weight: 700;
 }
 
 .contact-inquiries .email {
@@ -993,6 +1014,16 @@ a {
   text-align: center;
 }
 
+.contact-footer p {
+  margin: 8px auto 0;
+  max-width: 760px;
+  text-align: center;
+}
+
+.contact-footer p:last-child {
+  font-size: clamp(0.9rem, 1vw, 1.15rem);
+}
+
 @media (max-width: 900px) {
   .contact-section {
     padding: 60px 22px 28px;
@@ -1010,8 +1041,7 @@ a {
     padding-top: 0;
   }
 
-  .social-area,
-  .contact-footer {
+  .social-area {
     text-align: left;
   }
 
@@ -1019,40 +1049,35 @@ a {
     justify-content: flex-start;
     
   }
-@media (max-width: 1120px) {
-    .contact-shell {
-        padding-top: 64px;
 
+  .contact-layout h3 {
+    font-size: clamp(2rem, 10vw, 3.1rem);
+  }
+
+  .contact-office p,
+  .contact-inquiries p,
+  .contact-inquiries a,
+  .contact-menu a,
+  .social-area p {
+    font-size: clamp(1rem, 4.6vw, 1.18rem);
+  }
+
+  .contact-menu {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 22px;
+  }
+
+  .contact-footer {
+    margin-top: 52px;
+    text-align: center;
+  }
+
+  .contact-footer p {
+    font-size: clamp(0.92rem, 4vw, 1.08rem);
+  }
+
+  .contact-footer p:last-child {
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+  }
 }
-.contact-shell {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: clamp(56px, 6vw, 118px) clamp(20px, 2.6vw, 50px) 24px;
-}
-* {
-    box-sizing: border-box;
-}
-user agent stylesheet
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-.contact-section {
-    min-height: 100vh;
-    background: linear-gradient(180deg, #ffffff 0%, #eaf4ff 34%, #1f70b8 100%);
-    color: var(--blue);
-}
-body {
-    margin: 0;
-    min-width: 320px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: var(--white);
-}
-:root {
-    --blue: #168fd8;
-    --blue-dark: #075aa8;
-    --blue-deep: #064d91;
-    --ink: #231f20;
-    --white: #ffffff;
