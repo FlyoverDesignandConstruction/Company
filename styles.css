@@ -867,10 +867,10 @@ a {
 }
 
 .contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 0.55fr 0.3fr;
+  display: flex;
   gap: 70px;
   align-items: start;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -881,7 +881,16 @@ a {
 }
 
 .contact-office {
+  flex: 1 1 58%;
   padding-top: 70px;
+}
+
+.contact-inquiries {
+  flex: 1 1 28%;
+}
+
+.contact-menu {
+  flex: 0 0 280px;
 }
 
 .contact-office p,
@@ -987,13 +996,14 @@ a {
   font-size: clamp(0.9rem, 1vw, 1.15rem);
 }
 
+
 @media (max-width: 900px) {
   .contact-section {
     padding: 60px 22px 28px;
   }
 
   .contact-layout {
-    grid-template-columns: 1fr;
+    display: block;
     gap: 42px;
     text-align: left;
   }
@@ -1002,6 +1012,11 @@ a {
   .contact-inquiries,
   .contact-menu {
     padding-top: 0;
+  }
+
+  .contact-inquiries,
+  .contact-menu {
+    margin-top: 42px;
   }
 
   .social-area {
