@@ -832,11 +832,7 @@ a {
     text-align: left;
   }
 }
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 15d77f30de42ec2f202bc41551a7330f2da072a4
 @media (max-width: 560px) {
   .mission-vision {
     padding: 44px 20px 48px;
@@ -850,9 +846,9 @@ a {
   .mission-copy p {
     font-size: 1.05rem;
     line-height: 1.55;
+    
   }
-
-  .read-more-btn {
+.read-more-btn {
     display: block;
     width: 100%;
     padding: 18px 0;
@@ -865,24 +861,21 @@ a {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     margin: 20px 0;
-  }
+}
 
-  .image-box {
+.image-box{
     width: 100%;
     overflow: hidden;
     border-radius: 0;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .image-box img {
+.image-box img{
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-<<<<<<< HEAD
-  }
-=======
   
   }
 }
@@ -892,7 +885,6 @@ a {
   padding: 90px 50px 24px;
   color: #168fd8;
   background: linear-gradient(180deg, #fff 0%, #eaf4ff 38%, #1f70b8 100%);
->>>>>>> 15d77f30de42ec2f202bc41551a7330f2da072a4
 }
 
 .contact-section {
@@ -1034,9 +1026,8 @@ a {
 
 @media (max-width: 900px) {
   .contact-section {
-  .contact-menu
-    display: block;
-  
+    padding: 60px 22px 28px;
+  }
 
   .contact-layout {
     grid-template-columns: 1fr;
@@ -1056,9 +1047,8 @@ a {
 
   .social-links {
     justify-content: flex-start;
+    
   }
-<<<<<<< HEAD
-=======
 
   .contact-layout h3 {
     font-size: clamp(2rem, 10vw, 3.1rem);
@@ -1090,5 +1080,4 @@ a {
   .contact-footer p:last-child {
     font-size: clamp(0.8rem, 3.5vw, 0.95rem);
   }
->>>>>>> 15d77f30de42ec2f202bc41551a7330f2da072a4
 }
