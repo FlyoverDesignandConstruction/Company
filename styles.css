@@ -114,7 +114,7 @@ a {
 }
 
 .site-nav a {
-  position: relative;
+  position: fixed;
   color: var(--white);
   font-size: clamp(1.35rem, 1.8vw, 2.18rem);
   font-weight: 900;
