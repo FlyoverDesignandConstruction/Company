@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotation Request Form (RFI)</title>
+    <link rel="stylesheet" href="RFA styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <form id="rfiForm" class="rfi-form">
+        <header class="form-header">
+          <h1>Quotation Request Form (RFI)</h1>
+          <p>(Client to Contractor)</p>
+        </header>
+
+        <div class="section-grid">
+          <section class="panel span-6" aria-labelledby="projectInformationTitle">
+            <div class="section-title">
+              <span class="step-number">1</span>
+              <h2 id="projectInformationTitle">Project Information</h2>
+            </div>
+
+            <div class="field-row">
+              <label for="projectName">Project Name:</label>
+              <input id="projectName" name="projectName" type="text" required />
+            </div>
+
+            <div class="field-row">
+              <label for="projectLocation">Project Location:</label>
+              <input id="projectLocation" name="projectLocation" type="text" />
+            </div>
+
+            <div class="field-row field-row-top">
+              <span class="field-label">Project Type:</span>
+              <div class="checkbox-grid project-type-grid">
+                <label><input type="checkbox" name="projectTypes" value="Residential" />Residential</label>
+                <label><input type="checkbox" name="projectTypes" value="Commercial" />Commercial</label>
+                <label><input type="checkbox" name="projectTypes" value="Industrial" />Industrial</label>
+                <label><input type="checkbox" name="projectTypes" value="Renovation" />Renovation</label>
+                <label class="other-inline"><input type="checkbox" name="projectTypes" value="Other" />Other:<input class="inline-input" type="text" name="otherProjectType" aria-label="Other project type" /></label>
+              </div>
+            </div>
+
+            <div class="field-row compact-date">
+              <label for="expectedStartDate">Expected Start Date:</label>
+              <input id="expectedStartDate" name="expectedStartDate" type="date" />
+            </div>
+
+            <div class="field-row compact-date">
+              <label for="expectedCompletionDate">Expected Completion Date:</label>
+              <input id="expectedCompletionDate" name="expectedCompletionDate" type="date" />
+            </div>
+          </section>
+
+          <section class="panel span-6" aria-labelledby="clientInformationTitle">
+            <div class="section-title">
+              <span class="step-number">2</span>
+              <h2 id="clientInformationTitle">Client Information</h2>
+            </div>
+
+            <div class="field-row">
+              <label for="clientName">Client Name:</label>
+              <input id="clientName" name="clientName" type="text" required />
+            </div>
+
+            <div class="field-row">
+              <label for="companyName">Company Name (if any):</label>
+              <input id="companyName" name="companyName" type="text" />
+            </div>
+
+            <div class="field-row field-row-top">
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" rows="4"></textarea>
+            </div>
+
+            <div class="field-row">
+              <label for="phone">Phone Number:</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+
+            <div class="field-row">
+              <label for="email">Email:</label>
+              <input id="email" name="email" type="email" />
+            </div>
+          </section>
+
+          <section class="panel span-6" aria-labelledby="scopeTitle">
+            <div class="section-title">
+              <span class="step-number">3</span>
+              <h2 id="scopeTitle">Scope of Work (လုပ်ငန်းအမျိုးအစား)</h2>
+            </div>
+
+            <p class="section-prompt">Please provide quotation for the following work:</p>
+            <div class="checkbox-grid two-columns">
+              <label><input type="checkbox" name="scopes" value="Site Preparation" />Site Preparation</label>
+              <label><input type="checkbox" name="scopes" value="Electrical Installation" />Electrical Installation</label>
+              <label><input type="checkbox" name="scopes" value="Foundation Work" />Foundation Work</label>
+              <label><input type="checkbox" name="scopes" value="Plumbing Work" />Plumbing Work</label>
+              <label><input type="checkbox" name="scopes" value="Structural Work" />Structural Work (Columns, Beams, Slab)</label>
+              <label><input type="checkbox" name="scopes" value="Interior Finishing" />Interior Finishing</label>
+              <label><input type="checkbox" name="scopes" value="Masonry Work" />Masonry Work (Brick / Block Work)</label>
+              <label><input type="checkbox" name="scopes" value="Painting Work" />Painting Work</label>
+              <label><input type="checkbox" name="scopes" value="Roofing Work" />Roofing Work</label>
+              <label><input type="checkbox" name="scopes" value="Renovation Works" />Renovation Works</label>
+              <label class="other-line"><input type="checkbox" name="scopes" value="Others" />Others:<input type="text" name="otherScope" aria-label="Other scope of work" /></label>
+            </div>
+          </section>
+
+          <section class="panel span-6" aria-labelledby="requiredInfoTitle">
+            <div class="section-title">
+              <span class="step-number">4</span>
+              <h2 id="requiredInfoTitle">Required Information From Contractor</h2>
+            </div>
+
+            <p class="section-prompt">Please include in your quotation:</p>
+            <div class="checkbox-grid single-column dense-list">
+              <label><input type="checkbox" name="requiredInfo" value="Detailed BOQ with unit rates" />Detailed BOQ (Bill of Quantity) with unit rates</label>
+              <label><input type="checkbox" name="requiredInfo" value="Total project cost breakdown" />Total project cost breakdown</label>
+              <label><input type="checkbox" name="requiredInfo" value="Construction method statement" />Construction method statement</label>
+              <label><input type="checkbox" name="requiredInfo" value="Material specifications" />Material specifications to be used</label>
+              <label><input type="checkbox" name="requiredInfo" value="Project timeline" />Project timeline / work schedule</label>
+              <label><input type="checkbox" name="requiredInfo" value="Labour and material cost separation" />Labour cost &amp; material cost separation (if possible)</label>
+              <label><input type="checkbox" name="requiredInfo" value="Payment terms and conditions" />Payment terms &amp; conditions</label>
+              <label><input type="checkbox" name="requiredInfo" value="Warranty or guarantee period" />Warranty / guarantee period (if any)</label>
+              <label><input type="checkbox" name="requiredInfo" value="Additional or variation work conditions" />Additional / variation work conditions</label>
+            </div>
+          </section>
+
+          <section class="panel span-5" aria-labelledby="documentsTitle">
+            <div class="section-title">
+              <span class="step-number">5</span>
+              <h2 id="documentsTitle">Drawing / Documents</h2>
+            </div>
+
+            <div class="checkbox-grid single-column dense-list">
+              <label><input type="checkbox" name="documents" value="Architectural Drawing Provided" />Architectural Drawing Provided</label>
+              <label><input type="checkbox" name="documents" value="Structural Drawing Provided" />Structural Drawing Provided</label>
+              <label><input type="checkbox" name="documents" value="Site Plan Provided" />Site Plan Provided</label>
+              <label><input type="checkbox" name="documents" value="Not Available" />Not Available (Contractor to propose design)</label>
+            </div>
+          </section>
+
+          <section class="panel span-3" aria-labelledby="budgetTitle">
+            <div class="section-title">
+              <span class="step-number">6</span>
+              <h2 id="budgetTitle">Budget (Optional)</h2>
+            </div>
+
+            <label class="stacked-field" for="budgetRange">
+              <span>Estimated Budget Range (if any):</span>
+              <input id="budgetRange" name="budgetRange" type="text" />
+            </label>
+          </section>
+
+          <section class="panel span-4" aria-labelledby="specialRequirementsTitle">
+            <div class="section-title">
+              <span class="step-number">7</span>
+              <h2 id="specialRequirementsTitle">Special Requirements</h2>
+            </div>
+
+            <textarea id="specialRequirements" name="specialRequirements" rows="5" aria-label="Special requirements"></textarea>
+          </section>
+
+          <section class="panel span-12" aria-labelledby="submissionTitle">
+            <div class="section-title">
+              <span class="step-number">8</span>
+              <h2 id="submissionTitle">Submission Details</h2>
+            </div>
+
+            <p class="section-prompt">Please submit your quotation to:</p>
+            <div class="submission-layout">
+              <div class="submission-main">
+                <div class="field-row">
+                  <label for="submissionEmail">Email:</label>
+                  <input id="submissionEmail" name="submissionEmail" type="email" />
+                </div>
+                <div class="field-row field-row-top">
+                  <label for="submissionAddress">Address:</label>
+                  <textarea id="submissionAddress" name="submissionAddress" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="field-row deadline-row">
+                <label for="submissionDeadline">Submission Deadline:</label>
+                <input id="submissionDeadline" name="submissionDeadline" type="date" />
+              </div>
+            </div>
+          </section>
+
+          <section class="panel span-12 notes-panel" aria-labelledby="notesTitle">
+            <div class="section-title">
+              <span class="step-number">9</span>
+              <h2 id="notesTitle">Notes</h2>
+            </div>
+
+            <ul>
+              <li>This is a Request for Information (RFI) and does not constitute a contract.</li>
+              <li>Contractor is requested to provide accurate and detailed quotation.</li>
+              <li>Any clarification should be requested before submission.</li>
+            </ul>
+          </section>
+
+          <section class="panel span-12" aria-labelledby="authorizationTitle">
+            <div class="section-title">
+              <span class="step-number">10</span>
+              <h2 id="authorizationTitle">Client Authorization</h2>
+            </div>
+
+            <div class="authorization-grid">
+              <div class="auth-fields">
+                <div class="field-row">
+                  <label for="authorizationName">Name:</label>
+                  <input id="authorizationName" name="authorizationName" type="text" />
+                </div>
+                <div class="field-row compact-date">
+                  <label for="authorizationDate">Date:</label>
+                  <input id="authorizationDate" name="authorizationDate" type="date" />
+                </div>
+              </div>
+
+              <div class="signature-block">
+                <span class="field-label">Signature:</span>
+                <div class="signature-pad">
+                  <canvas id="signatureCanvas" width="320" height="150" aria-label="Signature pad"></canvas>
+                  <button class="icon-button" id="clearSignature" type="button" aria-label="Clear signature">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2m-1 5v6M9 11v6m-3-11 1 14h10l1-14" /></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="stamp-block">
+                <label for="companyStamp">Company Stamp:</label>
+                <input id="companyStamp" name="companyStamp" type="file" accept="image/*" />
+                <div class="stamp-preview" id="stampPreview">
+                  <span>Upload stamp</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="form-actions">
+          <button class="submit-button" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z" /><path d="M22 2 11 13" /></svg>
+            <span>Submit Request</span>
+          </button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+          No.123, Construction Road, Yangon, Myanmar
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.63 2.61a2 2 0 0 1-.45 2.11L8 9.68a16 16 0 0 0 6.32 6.32l1.24-1.24a2 2 0 0 1 2.11-.45c.84.3 1.71.51 2.61.63A2 2 0 0 1 22 16.92Z" /></svg>
+          +95 9 123 456 789
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 8 8 8-8" /><path d="M4 4h16v16H4z" /><path d="m20 20-6-6M4 20l6-6" /></svg>
+          info@buildwell.com
+        </span>
+        <span class="socials">f&nbsp;&nbsp;in&nbsp;&nbsp;yt</span>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
