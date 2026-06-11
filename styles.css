@@ -18,7 +18,9 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  background: radial-gradient(circle at top, #1d73d0 0%, #0f3b7c 52%, #061f46 100%);
   color: var(--white);
 }
 
@@ -34,9 +36,7 @@ a {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 43%, rgba(255, 255, 255, 0) 72%),
-    url("hero-bg.png") center center / cover no-repeat;
+  background: linear-gradient(135deg, #07376f 0%, #0f5ebb 45%, #1891ff 100%);
   isolation: isolate;
 }
 
@@ -45,7 +45,8 @@ a {
   inset: 0;
   z-index: -1;
   content: "";
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(16, 106, 184, 0.04) 54%, rgba(0, 0, 0, 0.08) 100%);
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.14), transparent 45%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14) 15%, transparent 48%, rgba(0,0,0,0.18) 100%);
   pointer-events: none;
 }
 
@@ -114,18 +115,16 @@ a {
 }
 
 .site-nav a {
-  position: fixed;
   color: var(--white);
-  font-size: clamp(1.35rem, 1.8vw, 2.18rem);
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(0.95rem, 1.05vw, 1.3rem);
+  font-weight: 800;
+  line-height: 1.2;
   text-decoration: none;
   text-shadow:
-    -2px -2px 0 var(--blue),
-    2px -2px 0 var(--blue),
-    -2px 2px 0 var(--blue),
-    2px 2px 0 var(--blue),
-    0 3px 3px rgba(0, 51, 107, 0.22);
+    -1px -1px 0 rgba(7, 69, 150, 0.9),
+    1px -1px 0 rgba(7, 69, 150, 0.9),
+    -1px 1px 0 rgba(7, 69, 150, 0.9),
+    1px 1px 0 rgba(7, 69, 150, 0.9);
   transition: transform 160ms ease, filter 160ms ease;
 }
 
@@ -140,15 +139,15 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(210px, 14.5vw, 282px);
-  min-height: clamp(60px, 4.2vw, 80px);
-  padding: 0 25px;
+  min-width: clamp(180px, 12vw, 240px);
+  min-height: clamp(48px, 4vw, 64px);
+  padding: 0 20px;
   border-radius: 18px;
-  background: var(--blue);
+  background: linear-gradient(135deg, #0d5db3 0%, #247cdb 100%);
   color: var(--white);
-  font-size: clamp(1.45rem, 1.78vw, 2.15rem);
-  text-shadow: 0 2px 4px rgba(0, 43, 88, 0.5);
-  box-shadow: 0 12px 28px rgba(14, 88, 161, 0.2);
+  font-size: clamp(1rem, 1.1vw, 1.35rem);
+  text-shadow: 0 2px 6px rgba(0, 39, 93, 0.4);
+  box-shadow: 0 12px 28px rgba(6, 79, 132, 0.24);
 }
 
 .nav-toggle {
@@ -182,16 +181,16 @@ a {
 .hero-copy h1 {
   margin: 0;
   color: var(--white);
-  font-size: clamp(4.2rem, 5.75vw, 7rem);
+  font-size: clamp(3.2rem, 5vw, 5.2rem);
   font-weight: 900;
-  line-height: 1.12;
+  line-height: 1.08;
   letter-spacing: 0;
   text-shadow:
-    -3px -3px 0 var(--blue),
-    3px -3px 0 var(--blue),
-    -3px 3px 0 var(--blue),
-    3px 3px 0 var(--blue),
-    0 5px 4px rgba(0, 58, 120, 0.25);
+    -2px -2px 0 rgba(10, 80, 156, 0.9),
+    2px -2px 0 rgba(10, 80, 156, 0.9),
+    -2px 2px 0 rgba(10, 80, 156, 0.9),
+    2px 2px 0 rgba(10, 80, 156, 0.9),
+    0 4px 4px rgba(0, 58, 120, 0.22);
 }
 
 .hero-copy h1 span,
@@ -200,17 +199,17 @@ a {
 }
 
 .hero-copy p {
-  margin: clamp(24px, 2.15vw, 36px) 0 0;
+  margin: clamp(18px, 2vw, 28px) 0 0;
   color: var(--white);
-  font-size: clamp(1.25rem, 1.55vw, 1.95rem);
-  font-weight: 800;
-  line-height: 1.15;
+  font-size: clamp(1.05rem, 1.3vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.4;
   text-shadow:
-    -1px -1px 0 var(--blue),
-    1px -1px 0 var(--blue),
-    -1px 1px 0 var(--blue),
-    1px 1px 0 var(--blue),
-    0 3px 3px rgba(0, 58, 120, 0.25);
+    -1px -1px 0 rgba(12, 82, 152, 0.9),
+    1px -1px 0 rgba(12, 82, 152, 0.9),
+    -1px 1px 0 rgba(12, 82, 152, 0.9),
+    1px 1px 0 rgba(12, 82, 152, 0.9),
+    0 3px 3px rgba(0, 58, 120, 0.2);
 }
 
 .hero-actions {
@@ -224,12 +223,12 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 62px;
-  padding: 0 27px;
+  min-height: 54px;
+  padding: 0 24px;
   border-radius: 999px;
-  font-size: clamp(1.15rem, 1.25vw, 1.55rem);
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(1rem, 1.1vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1.2;
   text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
@@ -275,7 +274,7 @@ a {
   align-items: stretch;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--white);
+  background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 100%);
   isolation: isolate;
 }
 
@@ -362,11 +361,7 @@ a {
 }
 
 .overview-logo img {
-  display: block;
-  width: min(1320px, 142%);
-  max-width: none;
-  height: auto;
-  object-fit: contain;
+  display: none;
 }
 
 .overview-popup {
